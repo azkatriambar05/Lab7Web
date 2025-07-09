@@ -1245,3 +1245,80 @@ Laporan Praktikum
 beserta screenshotnya.
 5. Commit hasilnya pada repository masing-masing.
 6. Kirim URL repository pada e-learning ecampus
+
+---
+
+---
+
+Praktikum 11: VueJS
+
+Tujuan
+
+1. Mahasiswa mampu memahami konsep dasar API.
+2. Mahasiswa mampu memahami konsep dasar Framework VueJS.
+3. Mahasaswa mampu membuat Frontend API menggunakan Framework VueJS 3.
+4. 
+Instruksi Praktikum
+
+1. Persiapkan text editor misalnya VSCode.
+2. Buat folder dengan nama lab8_vuejs pada docroot webserver (htdocs)
+3. Ikuti langkah-langkah praktikum yang akan dijelaskan berikutnya.
+4. 
+Apa itu VueJS?
+
+VuesJS merupakan sebuah framework JavaScript untuk membangun aplikasi web atau
+tampilan interface website agar lebih interaktif. VueJS dapat digunakan untuk membangun
+aplikasi berbasis user interface, seperti halaman web, aplikasi mobile, dan aplikasi desktop.
+
+Framework ini juga menawarkan berbagai fitur, seperti reactive data binding, component-
+based architecture, dan tools untuk membangun aplikasi skalabel. Fitur utamanya adalah
+
+rendering dan komposisi elemen, sehingga bila pengguna hendak membuat aplikasi yang lebih
+kompleks akan membutuhkan routing, state management, template, build-tool, dan lain
+sebagainya. Adapun library VueJS berfokus pada view layer sehingga framework ini mudah untuk
+diimplementasikan dan diintegrasikan dengan library lain. Selain itu, VueJS juga terkenal
+mudah digunakan karena memiliki sintaksis yang sederhana dan intuitif, memungkinkan
+pengembang untuk membangun aplikasi web dengan mudah.
+Untuk lebih lengkapnya dapat dipelajari pada dokumentasinya pada websitenya
+https://vuejs.org/guide/introduction
+
+Langkah-langkah Praktikum
+
+Persiapan
+
+Untuk memulai penggunaan framework Vuejs, dapat dialkukan dengan menggunakan npm,
+atau bisa juga dengan cara manual. Untuk praktikum kali ini kita akan gunakan cara manual.
+Yang diperlukan adalah library Vuejs, Axios untuk melakukan call API REST. Menggunakan
+CDN.
+ 
+Menampilkan data
+
+File index.html
+ 
+File apps.js
+ 
+Hasil outpunya.
+ 
+
+File app.js lengkapi kodenya.
+ 
+File style.css
+
+ 
+Hasil Outputnya
+
+ 
+Pertanyaan dan Tugas
+Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan
+improvisasi.
+
+Laporan Praktikum
+
+1. Melanjutkan praktikum sebelumnya pada repository dengan nama
+Lab11Web_VueJS.
+2. Kerjakan semua latihan yang diberikan sesuai urutannya.
+3. Screenshot setiap perubahannya.
+4. Update file README.md dan tuliskan penjelasan dari setiap langkah praktikum
+beserta screenshotnya.
+5. Commit hasilnya pada repository masing-masing.
+6. Kirim URL repository pada e-learning ecampus
