@@ -923,7 +923,7 @@ Tujuan
 1. Memahami konsep AJAX dan cara kerjanya.
 2. Mampu mengimplementasikan AJAX pada aplikasi web dengan CodeIgniter 4.
 3. Melatih kemampuan problem solving dan debugging.
-4. 
+   
 Instruksi Praktikum
 
 1. Persiapkan text editor misalnya VSCode.
@@ -1017,14 +1017,18 @@ memanfaatkan model tersebut agar dapat diakses melalui AJAX.
 
 Membuat AJAX Controller
 
+![image](https://github.com/user-attachments/assets/af3bc43d-ff00-4fab-9c14-26fff09057c9)
 
 
 Membuat View
- 
+
+ ![image](https://github.com/user-attachments/assets/17894dd1-5346-49fc-84b1-7f47b75f688c)
+
 ajax_list.php
 
+![image](https://github.com/user-attachments/assets/afb14103-bfcc-4460-a498-cdc464c1b653)
 
-Pertanyaan dan Tugas
+**Pertanyaan dan Tugas**
 
 Selesaikan programnya sesuai Langkah-langkah yang ada. Tambahkan fungsi untuk
 tambah dan ubah data. Anda boleh melakukan improvisasi.
@@ -1070,14 +1074,18 @@ Langkah-langkah Praktikum
   
 Ubah method `admin_index()` di `Artikel.php` untuk mengembalikan data dalam format
 JSON jika request adalah AJAX. (Sama seperti modul sebelumnya)
- 
+
+ ![image](https://github.com/user-attachments/assets/bc13c92b-dadd-4af5-bc4c-92a4ae982bec)
+
 3. Modifikasi View (admin_index.php)
    
 * Ubah view `admin_index.php` untuk menggunakan jQuery.
 * Hapus kode yang menampilkan tabel artikel dan pagination secara langsung.
 * Tambahkan elemen untuk menampilkan data artikel dan pagination dari AJAX.
 * Tambahkan kode jQuery untuk melakukan request AJAX.
- 
+
+ ![image](https://github.com/user-attachments/assets/d43b2585-812c-487d-8d74-df60a6806f5c)
+
 **Pertanyaan dan Tugas**
 
 1. Selesaikan semua langkah praktikum di atas.
@@ -1160,6 +1168,7 @@ Pada tahap ini, kita akan membuat file REST Controller yang berisi fungsi untuk 
 menambah, mengubah dan menghapus data. Masuklah ke direktori app\Controllers dan buatlah file
 baru bernama Post.php. Kemudian, salin kode di bawah ini ke dalam file tersebut:
  
+![image](https://github.com/user-attachments/assets/c9fa898f-7f75-4d82-8ef6-bc66b7fb8aab)
 
 Kode diatas berisi 5 method, yaitu:
 
@@ -1178,19 +1187,25 @@ Membuat Routing REST API
 Untuk mengakses REST API CodeIgniter, kita perlu mendefinisikan route-nya terlebih dulu.
 Caranya, masuklah ke direktori app/Config dan bukalah file Routes.php. Tambahkan kode
 di bawah ini:
- 
+
+ ![image](https://github.com/user-attachments/assets/434ccb50-c93d-4a90-b39e-8eb330997f6a)
+
 Untuk mengecek route nya jalankan perintah berikut:
 
 php spark routes
 
 Selanjutnya akan muncul daftar route yang telah dibuat.
  
+![image](https://github.com/user-attachments/assets/80b07f37-cf4f-4ab5-9c6f-46b78bb6f9c8)
 
 Seperti yang terlihat, satu baris kode routes yang di tambahkan akan menghasilkan banyak
 Endpoint.
 
 Selanjutnya melakukan uji coba terhadap REST API CodeIgniter.
+
 Testing REST API CodeIgniter
+
+![image](https://github.com/user-attachments/assets/de3338e0-522f-486b-859d-e10f24743e34)
 
 Buka aplikasi postman dan pilih create new → HTTP Request
  
@@ -1201,7 +1216,9 @@ http://localhost:8080/post
 
 Lalu, klik Send. Jika hasil test menampilkan semua data artikel dari database, maka pengujian
 berhasil.
- 
+
+ ![image](https://github.com/user-attachments/assets/73574d4b-e8d1-4c6b-9973-e54bb72070b2)
+
 Menampilkan Data Spesifik
 
 Masih menggunakan method GET, hanya perlu menambahkan ID artikel di belakang URL
@@ -1210,6 +1227,9 @@ http://localhost:8080/post/2
 
 Selanjutnya, klik Send. Request tersebut akan menampilkan data artikel yang memiliki ID
 nomor 2 di database.
+
+![image](https://github.com/user-attachments/assets/25fe6b92-ed40-4e21-a56e-a09af01c6708)
+
  
 Mengubah Data
 
@@ -1221,7 +1241,9 @@ http://localhost:8080/post/2
 Selanjutnya, pilih tab Body. Kemudian, pilih x-www-form-uriencoded. Masukkan nama
 atribut tabel pada kolom KEY dan nilai data yang baru pada kolom VALUE. Kalau sudah,
 klik Send.
- 
+
+ ![image](https://github.com/user-attachments/assets/d973b0dc-7bb4-4ed6-8eda-6ae5e64a28c8)
+
 Menghapus Data
 
 Pilih method DELETE untuk menghapus data. Lalu, masukkan URL spesifik data mana yang
@@ -1230,7 +1252,9 @@ http://localhost:8080/post/4
 
 Langsung saja klik Send, maka akan mendapatkan pesan bahwa data telah berhasil dihapus dari
 database.
- 
+
+ ![image](https://github.com/user-attachments/assets/e03ad00f-6357-478a-b77c-9f0bcc922bd1)
+
 Pertanyaan dan Tugas
 
 Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan
@@ -1263,22 +1287,15 @@ Instruksi Praktikum
 1. Persiapkan text editor misalnya VSCode.
 2. Buat folder dengan nama lab8_vuejs pada docroot webserver (htdocs)
 3. Ikuti langkah-langkah praktikum yang akan dijelaskan berikutnya.
-4. 
+   
 Apa itu VueJS?
 
 VuesJS merupakan sebuah framework JavaScript untuk membangun aplikasi web atau
-tampilan interface website agar lebih interaktif. VueJS dapat digunakan untuk membangun
-aplikasi berbasis user interface, seperti halaman web, aplikasi mobile, dan aplikasi desktop.
+tampilan interface website agar lebih interaktif. VueJS dapat digunakan untuk membangun aplikasi berbasis user interface, seperti halaman web, aplikasi mobile, dan aplikasi desktop.
 
-Framework ini juga menawarkan berbagai fitur, seperti reactive data binding, component-
-based architecture, dan tools untuk membangun aplikasi skalabel. Fitur utamanya adalah
-
-rendering dan komposisi elemen, sehingga bila pengguna hendak membuat aplikasi yang lebih
-kompleks akan membutuhkan routing, state management, template, build-tool, dan lain
-sebagainya. Adapun library VueJS berfokus pada view layer sehingga framework ini mudah untuk
-diimplementasikan dan diintegrasikan dengan library lain. Selain itu, VueJS juga terkenal
-mudah digunakan karena memiliki sintaksis yang sederhana dan intuitif, memungkinkan
-pengembang untuk membangun aplikasi web dengan mudah.
+Framework ini juga menawarkan berbagai fitur, seperti reactive data binding, component-based architecture, dan tools untuk membangun aplikasi skalabel. Fitur utamanya adalah rendering dan komposisi elemen, sehingga bila pengguna hendak membuat aplikasi yang lebih kompleks akan membutuhkan routing, state management, template, build-tool, dan lain sebagainya.
+Adapun library VueJS berfokus pada view layer sehingga framework ini mudah untuk
+diimplementasikan dan diintegrasikan dengan library lain. Selain itu, VueJS juga terkenal mudah digunakan karena memiliki sintaksis yang sederhana dan intuitif, memungkinkan pengembang untuk membangun aplikasi web dengan mudah.
 Untuk lebih lengkapnya dapat dipelajari pada dokumentasinya pada websitenya
 https://vuejs.org/guide/introduction
 
@@ -1290,24 +1307,37 @@ Untuk memulai penggunaan framework Vuejs, dapat dialkukan dengan menggunakan npm
 atau bisa juga dengan cara manual. Untuk praktikum kali ini kita akan gunakan cara manual.
 Yang diperlukan adalah library Vuejs, Axios untuk melakukan call API REST. Menggunakan
 CDN.
- 
+
+ ![image](https://github.com/user-attachments/assets/dff203c4-cc6d-41e5-8564-d7ab3bbed16f)
+
+![image](https://github.com/user-attachments/assets/7c4c2aaa-b3e6-469b-906c-8b0f623a81ea)
+
 Menampilkan data
 
 File index.html
- 
+
+ ![image](https://github.com/user-attachments/assets/88f0a368-a3a4-4f53-a91f-42aad959dbf9)
+
 File apps.js
- 
+
+ ![image](https://github.com/user-attachments/assets/ccbce0cd-335e-4d31-9b11-8049e664a01e)
+
 Hasil outpunya.
  
+![image](https://github.com/user-attachments/assets/295e8c35-3856-4e3b-9d05-556b993b98e8)
 
 File app.js lengkapi kodenya.
- 
+
+ ![image](https://github.com/user-attachments/assets/1cafae06-5a34-4db4-8bdd-944eadf93cd3)
+
 File style.css
 
- 
+ ![image](https://github.com/user-attachments/assets/9a25165d-bb88-463d-a229-a94cf2917418)
+
 Hasil Outputnya
 
- 
+ ![image](https://github.com/user-attachments/assets/5cdab98b-93cb-4596-a733-a3b038820be0)
+
 Pertanyaan dan Tugas
 Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan
 improvisasi.
