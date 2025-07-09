@@ -894,6 +894,7 @@ Lakukan uji coba untuk memastikan semua fungsi berjalan dengan baik:
 4.	Menghapus artikel.
  
 
+
 **Pertanyaan dan Tugas**
 
 1. Selesaikan semua langkah praktikum di atas.
@@ -910,3 +911,337 @@ Laporan Praktikum
 4. Update file README.md dengan penjelasan dan screenshot.
 5. Commit hasil praktikum.
 6. Kirim URL repository.
+
+---
+
+---
+
+**Praktikum 8: AJAX**
+
+Tujuan
+
+1. Memahami konsep AJAX dan cara kerjanya.
+2. Mampu mengimplementasikan AJAX pada aplikasi web dengan CodeIgniter 4.
+3. Melatih kemampuan problem solving dan debugging.
+4. 
+Instruksi Praktikum
+
+1. Persiapkan text editor misalnya VSCode.
+2. Buka kembali folder dengan nama lab7_php_ci pada docroot webserver (htdocs)
+3. Ikuti langkah-langkah praktikum yang akan dijelaskan berikutnya.
+   
+Apa itu AJAX?
+
+AJAX merupakan singkatan dari Asynchronous JavaScript and XML. Meskipun
+kepanjangannya menyebutkan XML, pada praktiknya AJAX tidak terbatas pada
+penggunaan XML saja. AJAX adalah kumpulan teknik pengembangan web yang
+memungkinkan aplikasi web bekerja secara asynchronous (tidak langsung).
+Dengan kata lain, AJAX memungkinkan aplikasi web untuk memperbarui dan
+menampilkan data dari server tanpa harus melakukan reload halaman secara
+keseluruhan. Hal ini membuat aplikasi web terasa lebih responsif dan dinamis.
+
+Cara Kerja AJAX
+
+AJAX bekerja dengan cara berikut:
+
+1. Event Trigger:
+Pengguna melakukan suatu aksi di halaman web, misalnya menekan tombol atau
+mengetikkan sesuatu pada formulir.
+
+3. Request Dikirim:
+JavaScript di browser akan membuat request HTTP ke server. Request ini biasanya
+berupa request GET atau POST, dan bisa membawa data tambahan jika diperlukan.
+
+4. Server Memproses Request:
+   
+Server menerima request dan memprosesnya sesuai dengan kebutuhan. Server bisa
+mengambil data dari database, melakukan kalkulasi tertentu, atau melakukan aksi
+lainnya.
+
+5. Respon Dikembalikan:
+   
+Server mengirimkan respon kembali ke browser. Respon ini biasanya berupa data
+dalam format JSON (JavaScript Object Notation) atau format lainnya.
+
+6. Data Ditampilkan:
+   
+JavaScript di browser menerima respon dari server. JavaScript kemudian memproses
+data tersebut dan memperbarui bagian tertentu dari halaman web tanpa perlu
+melakukan reload keseluruhan.
+
+Keuntungan menggunakan AJAX:
+
+• Meningkatkan User Experience (UX): Hal ini karena halaman web tidak perlu
+dimuat ulang setiap kali ada interaksi pengguna, sehingga membuat aplikasi web
+terasa lebih responsif dan dinamis.
+
+• Menghemat Bandwidth: Hanya data yang dibutuhkan yang dikirimkan antara
+browser dan server, sehingga menghemat bandwidth dan mempercepat loading
+halaman.
+
+• Mempertahankan State Aplikasi: Dengan AJAX, state aplikasi (misalnya data yang
+sedang diedit) bisa dipertahankan walaupun halaman tidak di-reload.
+
+Contoh Penggunaan AJAX:
+
+• Live chat applications
+
+• Autocomplete suggestions
+
+• Real-time updates (misalnya pada papan skor pertandingan olahraga)
+
+• Validasi formulir secara real-time
+
+• Dan masih banyak lagi
+Dengan memahami konsep dan cara kerja AJAX, Anda dapat membuat aplikasi web yang
+lebih interaktif dan menarik bagi pengguna.
+
+Langkah-langkah Praktikum
+
+Persiapan
+
+Buka Kembali project sebelumnya, kemudian kita tambahkan Pustaka yang dibutuhkan
+pada project tersebut.
+
+Menambahkan Pustaka jQuery.
+
+Kita akan menggunakan pustaka jQuery untuk mempermudah proses AJAX. Download
+pustaka jQuery versi terbaru dari https://jquery.com dan ekstrak filenya.
+
+Salin file jquery-3.6.0.min.js ke folder public/assets/js.
+
+Membuat Model.
+
+Pada modul sebelumnya sudah dibuat ArtikelModel, pada modul ini kita akan
+memanfaatkan model tersebut agar dapat diakses melalui AJAX.
+
+Membuat AJAX Controller
+
+
+
+Membuat View
+ 
+ajax_list.php
+
+
+Pertanyaan dan Tugas
+
+Selesaikan programnya sesuai Langkah-langkah yang ada. Tambahkan fungsi untuk
+tambah dan ubah data. Anda boleh melakukan improvisasi.
+
+Laporan Praktikum
+
+1. Melanjutkan praktikum sebelumnya pada repository dengan nama Lab7Web.
+2. Kerjakan semua latihan yang diberikan sesuai urutannya.
+3. Screenshot setiap perubahannya.
+4. Update file README.md dan tuliskan penjelasan dari setiap langkah praktikum
+beserta screenshotnya.
+5. Commit hasilnya pada repository masing-masing.
+6. Kirim URL repository pada e-learning ecampus
+
+---
+
+---
+
+**Praktikum 9: Implementasi AJAX Pagination dan Search**
+
+Tujuan
+
+1. Mahasiswa mampu memahami konsep dasar AJAX untuk pagination dan search.
+2. Mahasiswa mampu mengimplementasikan pagination dan search menggunakan AJAX
+dalam CodeIgniter 4.
+3. Mahasiswa mampu meningkatkan performa dan User Experience (UX) aplikasi web.
+   
+Instruksi Praktikum
+
+1. Persiapkan text editor (VSCode).
+2. Buka kembali folder proyek lab7_php_ci.
+3. Ikuti langkah-langkah praktikum berikut.
+Langkah-langkah Praktikum
+
+1. Persiapan
+   
+* Pastikan MySQL Server sudah berjalan.
+* Buka database `lab_ci4`.
+* Pastikan tabel `artikel` dan `kategori` sudah ada dan terisi data.
+* Pastikan library jQuery sudah terpasang atau dapat diakses melalui CDN.
+  
+2. Modifikasi Controller Artikel
+  
+Ubah method `admin_index()` di `Artikel.php` untuk mengembalikan data dalam format
+JSON jika request adalah AJAX. (Sama seperti modul sebelumnya)
+ 
+3. Modifikasi View (admin_index.php)
+   
+* Ubah view `admin_index.php` untuk menggunakan jQuery.
+* Hapus kode yang menampilkan tabel artikel dan pagination secara langsung.
+* Tambahkan elemen untuk menampilkan data artikel dan pagination dari AJAX.
+* Tambahkan kode jQuery untuk melakukan request AJAX.
+ 
+**Pertanyaan dan Tugas**
+
+1. Selesaikan semua langkah praktikum di atas.
+2. Modifikasi tampilan data artikel dan pagination sesuai kebutuhan desain.
+3. Tambahkan indikator loading saat data sedang diambil dari server.
+4. Implementasikan fitur sorting (mengurutkan artikel berdasarkan judul, dll.) dengan AJAX.
+   
+Laporan Praktikum
+
+1. Lanjutkan praktikum pada repository Lab7Web.
+2. Kerjakan semua latihan sesuai urutan.
+3. Screenshot setiap perubahan dan hasil uji coba.
+4. Update file README.md dengan penjelasan dan screenshot.
+5. Commit hasil praktikum.
+6. Kirim URL repository.
+
+---
+
+---
+
+Praktikum 10: API
+
+Tujuan
+
+1. Mahasiswa mampu memahami konsep dasar API.
+2. Mahasiswa mampu memahami konsep dasar RESTFull.
+3. Mahasaswa mampu membuat API menggunakan Framework Codeigniter 4.
+   
+Instruksi Praktikum
+
+1. Persiapkan text editor misalnya VSCode.
+2. Buka kembali folder dengan nama lab7_php_ci pada docroot webserver (htdocs)
+3. Ikuti langkah-langkah praktikum yang akan dijelaskan berikutnya.
+4. 
+Apa itu REST API?
+
+Representational State Transfer (REST) adalah salah satu desain arsitektur Application
+Programming Interface (API). API sendiri merupakan interface yang menjadi perantara
+yang menghubungkan satu aplikasi dengan aplikasi lainnya.
+
+REST API berisi aturan untuk membuat web service dengan membatasi hak akses client
+yang mengakses API. Kenapa harus demikian? Jika dianalogikan sebagai restoran, REST API adalah daftar menu. Pelanggan hanya bisa
+memesan sesuai daftar menu meskipun si koki (server) bisa membuatkan pesanan tersebut.
+
+REST API bisa diakses atau dihubungkan dengan aplikasi lain. Oleh sebab itu, pembatasan
+dilakukan untuk melindungi database/resource yang ada di server.
+
+Cara kerja REST API menggunakan prinsip REST Server dan REST Client.
+REST Server bertindak sebagai penyedia data/resource, sedangkan REST Client akan
+membuat HTTP request pada server dengan URI atau global ID. Nantinya, server akan
+memberikan response dengan mengirim kembali HTTP request yang diminta client.
+Nah, data yang dikirim maupun diterima ini biasanya berformat JSON. Itulah kenapa REST
+API mudah diintegrasikan dengan berbagai platform dengan bahasa pemrograman
+ataupun framework yang berbeda.
+Misalnya, Anda membuat backend project menggunakan REST API dengan bahasa
+pemrograman PHP. Nantinya, REST API tersebut bisa dihubungkan dengan frontend yang
+menggunakan Vue js.
+Pengembangan aplikasi tentu lebih cepat dan efisien, kan? Apalagi, cara membuat REST
+API juga mudah. Anda bisa menggunakan framework PHP seperti CodeIgniter.
+Kebetulan, di artikel ini kami akan menjelaskan cara membuat web service dengan
+CodeIgniter. Yuk, simak selengkapnya!
+
+Langkah-langkah Praktikum
+
+Persiapan
+
+Periapan awal adalah mengunduh aplikasi REST Client, ada banyak aplikasi yang dapat digunakan untuk
+keperluan tersebut. Salah satunya adalah Postman. Postman – Merupakan aplikasi yang berfungsi
+sebagai REST Client, digunakan untuk testing REST API. Unduh apliasi Postman dari tautan berikut:
+https://www.postman.com/downloads/
+
+Membuat Model.
+
+Pada modul sebelumnya sudah dibuat ArtikelModel, pada modul ini kita akan memanfaatkan model
+tersebut agar dapat diakses melalui API.
+
+Membuat REST Controller
+
+Pada tahap ini, kita akan membuat file REST Controller yang berisi fungsi untuk menampilkan,
+menambah, mengubah dan menghapus data. Masuklah ke direktori app\Controllers dan buatlah file
+baru bernama Post.php. Kemudian, salin kode di bawah ini ke dalam file tersebut:
+ 
+
+Kode diatas berisi 5 method, yaitu:
+
+• index() – Berfungsi untuk menampilkan seluruh data pada database.
+
+• create() – Berfungsi untuk menambahkan data baru ke database.
+
+• show() – Berfungsi untuk menampilkan suatu data spesifik dari database.
+
+• update() – Berfungsi untuk mengubah suatu data pada database.
+
+• delete() – Berfungsi untuk menghapus data dari database.
+
+Membuat Routing REST API
+
+Untuk mengakses REST API CodeIgniter, kita perlu mendefinisikan route-nya terlebih dulu.
+Caranya, masuklah ke direktori app/Config dan bukalah file Routes.php. Tambahkan kode
+di bawah ini:
+ 
+Untuk mengecek route nya jalankan perintah berikut:
+
+php spark routes
+
+Selanjutnya akan muncul daftar route yang telah dibuat.
+ 
+
+Seperti yang terlihat, satu baris kode routes yang di tambahkan akan menghasilkan banyak
+Endpoint.
+
+Selanjutnya melakukan uji coba terhadap REST API CodeIgniter.
+Testing REST API CodeIgniter
+
+Buka aplikasi postman dan pilih create new → HTTP Request
+ 
+Menampilkan Semua Data
+
+Pilih method GET dan masukkan URL berikut:
+http://localhost:8080/post
+
+Lalu, klik Send. Jika hasil test menampilkan semua data artikel dari database, maka pengujian
+berhasil.
+ 
+Menampilkan Data Spesifik
+
+Masih menggunakan method GET, hanya perlu menambahkan ID artikel di belakang URL
+seperti ini:
+http://localhost:8080/post/2
+
+Selanjutnya, klik Send. Request tersebut akan menampilkan data artikel yang memiliki ID
+nomor 2 di database.
+ 
+Mengubah Data
+
+Untuk mengubah data, silakan ganti method menjadi PUT. Kemudian, masukkan URL artikel
+yang ingin diubah. Misalnya, ingin mengubah data artikel dengan ID nomor 2, maka masukkan
+URL berikut:
+http://localhost:8080/post/2
+
+Selanjutnya, pilih tab Body. Kemudian, pilih x-www-form-uriencoded. Masukkan nama
+atribut tabel pada kolom KEY dan nilai data yang baru pada kolom VALUE. Kalau sudah,
+klik Send.
+ 
+Menghapus Data
+
+Pilih method DELETE untuk menghapus data. Lalu, masukkan URL spesifik data mana yang
+ingin di hapus. Misalnya, ingin menghapus data nomor 4, maka URL-nya seperti ini:
+http://localhost:8080/post/4
+
+Langsung saja klik Send, maka akan mendapatkan pesan bahwa data telah berhasil dihapus dari
+database.
+ 
+Pertanyaan dan Tugas
+
+Selesaikan programnya sesuai Langkah-langkah yang ada. Anda boleh melakukan
+improvisasi.
+
+Laporan Praktikum
+
+1. Melanjutkan praktikum sebelumnya pada repository dengan nama Lab7Web.
+2. Kerjakan semua latihan yang diberikan sesuai urutannya.
+3. Screenshot setiap perubahannya.
+4. Update file README.md dan tuliskan penjelasan dari setiap langkah praktikum
+beserta screenshotnya.
+5. Commit hasilnya pada repository masing-masing.
+6. Kirim URL repository pada e-learning ecampus
